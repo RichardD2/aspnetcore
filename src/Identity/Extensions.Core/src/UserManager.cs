@@ -2522,8 +2522,7 @@ public class UserManager<TUser> : IDisposable where TUser : class
     private static ReadOnlySpan<char> AllowedChars =>
     [
         '2', '3', '4', '5', '6', '7', '8', '9',
-        'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K',
-        'M', 'N', 'P', 'Q', 'R', 'T', 'V', 'W', 'X', 'Y'
+        'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'M', 'N', 'P', 'Q', 'R', 'T', 'V', 'W', 'X', 'Y'
     ];
 #else
     // We don't want to use any confusing characters like 0/O 1/I/L/l
