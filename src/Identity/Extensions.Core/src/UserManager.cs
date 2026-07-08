@@ -2481,10 +2481,7 @@ public class UserManager<TUser> : IDisposable where TUser : class
 #if NET8_0_OR_GREATER
         return string.Create(11, 0, static (buffer, _) =>
         {
-            Span<char> temp = stackalloc char[10];
-            RandomNumberGenerator.GetItems(AllowedChars, temp);
-            temp[..5].CopyTo(buffer);
-            temp[5..].CopyTo(buffer[6..]);
+            RandomNumberGenerator.GetItems(AllowedChars, buffer);
             buffer[5] = '-';
         });
 #elif NET6_0_OR_GREATER
